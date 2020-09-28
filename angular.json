@@ -26,7 +26,17 @@
             "styles": [
               "src/styles.css"
             ],
-            "scripts": []
+            "scripts": [
+              "src/assets/js/bootstrap.min.js",
+              "src/assets/js/main.js",
+              "src/assets/js/contact.js",
+              "src/assets/js/html5shiv.js",
+              "src/assets/js/gmaps.js",
+              "src/assets/js/jquery.js",
+              "src/assets/js/jquery.prettyPhoto.js",
+              "src/assets/js/jquery.scrollUp.min.js",
+              "src/assets/js/price-range.js"
+            ]
           },
           "configurations": {
             "production": {
@@ -119,6 +129,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "thuchanh3bai1"
+    }
+  },
+  "defaultProject": "thuchanh3bai1",
+  "cli": {
+    "analytics": "d2d3307e-10e9-45fd-8919-72e5cd05f485"
+  }
 }
