@@ -1,3 +1,4 @@
+import { HomeModule } from './home/home.module';
 
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
@@ -7,8 +8,10 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 
-import { HomeComponent } from './home/home.component';
+
 import { HttpClientModule, HttpClient } from '@angular/common/http';
+
+
 
 
 @NgModule({
@@ -18,14 +21,17 @@ import { HttpClientModule, HttpClient } from '@angular/common/http';
     HeaderComponent,
     FooterComponent,
     
-    HomeComponent,
+    
   
   ],
   imports: [
     HttpClientModule,
     //HttpClient,
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HomeModule
+  
+  
   ],
   providers: [],
   bootstrap: [AppComponent]
