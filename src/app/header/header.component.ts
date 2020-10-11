@@ -11,7 +11,8 @@ import 'rxjs/add/operator/takeUntil';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent extends BaseComponent implements OnInit {
-  list_item:any;
+  chude:any;
+  nhaxuatban:any;
   constructor(injector: Injector) { 
     super(injector);
   }
@@ -21,7 +22,12 @@ export class HeaderComponent extends BaseComponent implements OnInit {
     this._api.get('/api/chude/get-all')
     .takeUntil(this.unsubscribe).subscribe(res => {
       console.log(res);   
-      this.list_item=res; 
+      this.chude=res; 
+    })
+    this._api.get('/api/nhaxuatban/get-all')
+    .takeUntil(this.unsubscribe).subscribe(res2 => {
+      console.log(res2);   
+      this.nhaxuatban=res2; 
     })
   }
 

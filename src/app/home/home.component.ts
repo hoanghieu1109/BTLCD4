@@ -13,6 +13,7 @@ import 'rxjs/add/operator/takeUntil';
 export class HomeComponent extends BaseComponent implements OnInit {
   list_item:any;
   chude:any;
+  nhaxuatban:any;
   // listpage: any;
   // page: any;
   // pageSize: any;
@@ -37,6 +38,11 @@ export class HomeComponent extends BaseComponent implements OnInit {
     .takeUntil(this.unsubscribe).subscribe(res2 => {
       console.log(res2);   
       this.chude=res2; 
+    })
+    this._api.get('/api/nhaxuatban/get-all')
+    .takeUntil(this.unsubscribe).subscribe(res2 => {
+      console.log(res2);   
+      this.nhaxuatban=res2; 
     })
 //     this.listpage = [];
 // this.page = 1;

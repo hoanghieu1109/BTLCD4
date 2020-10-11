@@ -67,18 +67,22 @@
                             
                             <li class="dropdown"><a href="#">Chủ đề<i class="fa fa-angle-down"></i></a>
                                
-                                <ul role="menu" class="sub-menu"> <ng-container *ngFor="let item of list_item">
+                                <ul role="menu" class="sub-menu">
+                                    <ng-container *ngFor="let item of chude">
                                     <li><a href="shop.html">{{item.tenChuDe}}</a></li>
                                     </ng-container>
                                 </ul>
-                            
+
                             </li> 
                             
-                            <li class="dropdown"><a href="#">Blog<i class="fa fa-angle-down"></i></a>
+                            <li class="dropdown"><a href="#">Nhà xuất bản<i class="fa fa-angle-down"></i></a>
+                                
                                 <ul role="menu" class="sub-menu">
-                                    <li><a href="blog.html">Blog List</a></li>
-                                    <li><a href="blog-single.html">Blog Single</a></li>
+                                    <ng-container *ngFor="let item of nhaxuatban">
+                                    <li><a href="blog.html">{{item.tenNXB}}</a></li> 
+                                    </ng-container>
                                 </ul>
+                                
                             </li> 
                             <li><a href="404.html">404</a></li>
                             <li><a href="contact-us.html">Contact</a></li>
