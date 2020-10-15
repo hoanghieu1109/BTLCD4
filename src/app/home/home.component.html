@@ -20,7 +20,7 @@
                         <div class="brands-name">
                             <ng-container *ngFor="let item of nhaxuatban">
                             <ul class="nav nav-pills nav-stacked">
-                                <li><a href="#"> <span class="pull-right">(50)</span>{{item.tenNXB}}</a></li>
+                                <li><a href="#">{{item.tenNXB}}</a></li>
                             </ul>
                             </ng-container>
                         </div>
@@ -47,29 +47,34 @@
                 <div class="features_items"><!--features_items-->
                     <h2 class="title text-center">Features Items</h2>
                    
-                    <ng-container *ngFor="let item of list_item">
+                    <ng-container *ngFor="let item of listpage">
                     <div class="col-sm-3">
                         <div class="product-image-wrapper">
                             <div class="single-products">
                                     <div class="productinfo text-center">       
-                                        <img src="assets/images/{{item.anhBia}}"alt="" style="width: 150px;height: 220px;" />
-                                        <h2>{{item.giaBan}}$</h2>
+                                        <img src="assets/images/{{item.anhBia}}"alt=""
+                                         [routerLink]="['./detailproduct',item.maSach]" style="width: 150px;height: 220px;" />
+                                        <h2>{{item.giaBan}}VNĐ</h2>
                                         <h4 class="product_name" style="height: 35px;">
-                                            <a [routerLink]="['/detailproduct']"> {{item.tenSach}}
+                                            <a [routerLink]="['/detailproduct',item.maSach]">
+                                            <p>{{item.tenSach}}</p>
                                             </a>
                                         </h4>
-                                        <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
+                                        <a (click)="addToCart(item)"class="btn btn-default add-to-cart">
+                                        <i class="fa fa-shopping-cart"></i>Add to cart</a>
                                     </div>
                             </div>
                         </div>
                     </div>
                 </ng-container>
-                <!-- <div class="shop_toolbar t_bottom">
-                    <ngb-pagination [collectionSize]="TotalSachs" [pageSize]="pageSize" [(page)]="page" [maxSize]="10" [rotate]="true" (pageChange)="loadPage($event)"></ngb-pagination>
-                </div> -->
+               
                 </div><!--features_items-->
-            
-                
+             
+                    <ngb-pagination [collectionSize]="totalSachs" [pageSize]="pageSize" [(page)]="page" [maxSize]="10" [rotate]="true" (pageChange)="loadPage($event)"></ngb-pagination>
+                <div>
+                    
+                </div>
+             
                 <div class="category-tab"><!--category-tab-->
                     <div class="col-sm-12">
                         <ul class="nav nav-tabs">

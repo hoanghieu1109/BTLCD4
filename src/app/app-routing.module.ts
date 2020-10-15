@@ -10,25 +10,19 @@ const routes: Routes = [
   {
     path: '', component: HomeComponent,
   },
+  {
+    path: 'home', component: HomeComponent,
+  },
+  // {
+  //   path: 'cart', component: CartComponent,
+  // },
   // {
   //   path: '', loadChildren:()=>(import('./home/home.module').then(x=>x.HomeModule)),
   // },
-  {
-    path: 'product',
-    loadChildren: () => import('./product/product.module').then((m) => m.ProductModule),
-  },
-  {
-    path: 'chitiet/:id',
-    component: DetailproductComponent,
-  },
   // {
-  //   path: 'product/id', component: ProductComponent,
+  //   path: 'product',
+  //   loadChildren: () => import('./product/product.module').then((m) => m.ProductModule),
   // },
-  // {
-  //   path: 'detailproduct/id', component: DetailproductComponent,
-  // },
-  
-  
 ];
 
 @NgModule({

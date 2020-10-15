@@ -14,6 +14,8 @@ import { HttpClientModule, HttpClient } from '@angular/common/http';
 
 
 
+
+
 @NgModule({
   declarations: [
 
@@ -29,7 +31,9 @@ import { HttpClientModule, HttpClient } from '@angular/common/http';
     //HttpClient,
     BrowserModule,
     AppRoutingModule,
-    HomeModule
+    HomeModule,
+    
+   
   
   
   ],

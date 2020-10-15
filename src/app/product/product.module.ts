@@ -1,3 +1,4 @@
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 
 import { NgModule } from '@angular/core';
@@ -17,7 +18,7 @@ const routes: Routes = [
   declarations: [],
   imports: [
    
-    RouterModule.forChild(routes),
+    RouterModule.forChild(routes),NgbModule
   ]
 })
 export class ProductModule { }
