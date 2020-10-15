@@ -1,6 +1,4 @@
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-
-
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
