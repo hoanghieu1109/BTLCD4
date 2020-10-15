@@ -1,6 +1,7 @@
 import { DetailproductComponent } from './../detailproduct/detailproduct.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { HomeComponent } from './home.component';
+import { ProductComponent } from './../product/product.component';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Routes, RouterModule } from '@angular/router';
@@ -17,6 +18,9 @@ const routes: Routes = [
   {
     path: 'cart', component: CartComponent,
   },
+  {  
+    path:'product/:id',component: ProductComponent
+  }
   
 ]
 

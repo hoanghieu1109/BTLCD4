@@ -1,8 +1,6 @@
-import { BaseComponent } from './../lib/base-component';
 import { Component, OnInit,Injector } from '@angular/core';
-import { Observable} from 'rxjs';
-import 'rxjs/add/observable/combineLatest';
-import 'rxjs/add/operator/takeUntil'; 
+import { BaseComponent } from './../lib/base-component';
+
 
 
 @Component({
@@ -13,6 +11,7 @@ import 'rxjs/add/operator/takeUntil';
 export class HeaderComponent extends BaseComponent implements OnInit {
   chude:any;
   nhaxuatban:any;
+  total:any;
   constructor(injector: Injector) { 
     super(injector);
   }
@@ -28,7 +27,14 @@ export class HeaderComponent extends BaseComponent implements OnInit {
     .takeUntil(this.unsubscribe).subscribe(res2 => {
       console.log(res2);   
       this.nhaxuatban=res2; 
-    })
+    });
+    
+    this._cart.items.subscribe((res) => {
+      this.total = res? res.length:0;
+    });
+    this._cart.items.subscribe((res) => {
+      this.total = res? res.length:0;
+    });
   }
 
 }

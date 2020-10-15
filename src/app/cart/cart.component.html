@@ -19,13 +19,13 @@
                     </tr>
                 </thead>
                 <tbody>
+                   
                     <tr *ngFor="let c of items"> 
-                        <td class="cart_product">
-                            <a href=""><img src="assets/images/{{c.anhBia}}" alt=""></a>
+                        <td class="product_remove">
+                            <a ><img src="assets/images/{{c.anhBia}}" alt=""></a>
                         </td>
                         <td class="cart_description">
-                            <h4><a href=""> {{c.tenSach}}</a></h4>
-                            
+                            <p><a href=""> {{c.tenSach}}</a></p>
                         </td>
                         <td class="cart_price">
                             <p> {{c.giaBan}}</p>
@@ -37,8 +37,8 @@
                                 <a class="cart_quantity_down" href=""> - </a>
                             </div>
                         </td>
-                        <td class="cart_total">
-                            <p class="cart_total_price">$59</p>
+                        <td class="product-subtotal">
+                            ${{c.money}}
                         </td>
                         <td class="cart_delete">
                             <a class="cart_quantity_delete" (click)="_cart.deleteItem(c.maSach)"><i class="fa fa-times"></i></a>

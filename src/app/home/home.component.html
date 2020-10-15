@@ -6,13 +6,13 @@
                     <h2>Chủ đề</h2>
                     
                     <div class="panel-group category-products" id="accordian"><!--category-productsr-->
-                        <ng-container *ngFor="let item of chude">
+                        <ng-container *ngFor="let getchude of chude">
                         <div class="panel panel-default">
                             <div class="panel-heading">
-                                <h4 class="panel-title"><a href="#">{{item.tenChuDe}}</a></h4>
+                                <h4 class="panel-title"><a [routerLink] = "['/product',getchude.maChuDe]" >{{getchude.tenChuDe}}</a></h4>
                             </div>
                         </div>
-                    </ng-container>
+                        </ng-container>
                     </div><!--/category-products-->
                     
                     <div class="brands_products"><!--brands_products-->
@@ -53,7 +53,7 @@
                             <div class="single-products">
                                     <div class="productinfo text-center">       
                                         <img src="assets/images/{{item.anhBia}}"alt=""
-                                         [routerLink]="['./detailproduct',item.maSach]" style="width: 150px;height: 220px;" />
+                                         [routerLink]="['/detailproduct',item.maSach]" style="width: 150px;height: 220px;" />
                                         <h2>{{item.giaBan}}VNĐ</h2>
                                         <h4 class="product_name" style="height: 35px;">
                                             <a [routerLink]="['/detailproduct',item.maSach]">
