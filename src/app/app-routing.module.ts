@@ -1,7 +1,4 @@
-import { DetailproductComponent } from './detailproduct/detailproduct.component';
-import { ProductComponent } from './product/product.component';
-import { CheckoutComponent } from './checkout/checkout.component';
-import { CartComponent } from './cart/cart.component';
+
 import { HomeComponent } from './home/home.component';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';

@@ -1,16 +1,16 @@
-import { BaseComponent } from './../lib/base-component';
-import { Component, OnInit, Injector } from '@angular/core';
-import { takeUntil } from 'rxjs/operators';
-import { Observable} from 'rxjs';
+import { BaseComponent } from './../../lib/base-component';
+import { Component, Injector, OnInit } from '@angular/core';
 import 'rxjs/add/observable/combineLatest';
 import 'rxjs/add/operator/takeUntil';
+import { takeUntil } from 'rxjs/operators';
+import { Observable} from 'rxjs';
 @Component({
-  selector: 'app-product',
-  templateUrl: './product.component.html',
-  styleUrls: ['./product.component.css']
+  selector: 'app-listchude',
+  templateUrl: './listchude.component.html',
+  styleUrls: ['./listchude.component.css']
 })
-export class ProductComponent extends BaseComponent implements OnInit {
-  spchude:any;
+export class ListchudeComponent extends BaseComponent implements OnInit {
+  spchude : any;
   list_item:any;
   chude:any;
   nhaxuatban:any;
@@ -22,16 +22,19 @@ export class ProductComponent extends BaseComponent implements OnInit {
   constructor(injector : Injector) { 
     super(injector);
    }
+
   ngOnInit(): void {
+    this.spchude = [];
     this._route.params.subscribe(params => {
       let id = params['id'];
-      this._api.get('api/sach/sp-get-by-chude/'+id).pipe(takeUntil(this.unsubscribe)).subscribe((res: any) => {
+      this._api.get('/api/sach/sp-get-by-chude/'+id).pipe(takeUntil(this.unsubscribe)).subscribe((res: any) => {
         this.spchude = res;
         setTimeout(() => {
           this.loadScripts();
         });
       }); 
     });
+
     Observable.combineLatest(
       this._api.get('/api/sach/get-all')
     ).takeUntil(this.unsubscribe).subscribe(res => {
@@ -76,8 +79,6 @@ this._route.params.subscribe(params => {
     this.totalSachs = res.totalSachs;
     }, err => { });       
 });   
-    
-    
   }
 
 }

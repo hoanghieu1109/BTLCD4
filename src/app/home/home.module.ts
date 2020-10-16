@@ -1,12 +1,12 @@
-import { DetailproductComponent } from './../detailproduct/detailproduct.component';
+import { ListchudeComponent } from './../home/listchude/listchude.component';
+import { DetailproductComponent } from './../home/detailproduct/detailproduct.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { HomeComponent } from './home.component';
-import { ProductComponent } from './../product/product.component';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Routes, RouterModule } from '@angular/router';
 import { from } from 'rxjs';
-import { CartComponent } from '../cart/cart.component';
+import { CartComponent } from '../customer/cart/cart.component';
 
 const routes: Routes = [
   {
@@ -19,17 +19,17 @@ const routes: Routes = [
     path: 'cart', component: CartComponent,
   },
   {  
-    path:'product/:id',component: ProductComponent
+    path:'listchude/:id',component: ListchudeComponent,
   }
   
 ]
 
 @NgModule({
-  declarations: [HomeComponent],
+  declarations: [HomeComponent,ListchudeComponent,DetailproductComponent],
   imports: [
     CommonModule,NgbModule,
     RouterModule,
-    RouterModule.forRoot(routes)
+    RouterModule.forChild(routes),
 
   ]
 })
