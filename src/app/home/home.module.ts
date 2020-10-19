@@ -1,3 +1,5 @@
+import { LoginComponent } from './../customer/login/login.component';
+import { CheckoutComponent } from './../customer/checkout/checkout.component';
 import { ListchudeComponent } from './../home/listchude/listchude.component';
 import { DetailproductComponent } from './../home/detailproduct/detailproduct.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
@@ -18,14 +20,20 @@ const routes: Routes = [
   {
     path: 'cart', component: CartComponent,
   },
+  {
+    path: 'checkout', component: CheckoutComponent,
+  },
   {  
     path:'listchude/:id',component: ListchudeComponent,
-  }
+  },
+  {
+    path: 'login', component: LoginComponent,
+  },
   
 ]
 
 @NgModule({
-  declarations: [HomeComponent,ListchudeComponent,DetailproductComponent],
+  declarations: [HomeComponent,ListchudeComponent,DetailproductComponent,CartComponent,CheckoutComponent],
   imports: [
     CommonModule,NgbModule,
     RouterModule,
