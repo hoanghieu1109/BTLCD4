@@ -7,17 +7,17 @@ import { Routes, RouterModule } from '@angular/router';
 
 
 const routers: Routes = [
-  {
-    path: 'cart', component: CartComponent,
-  },
-  {
-    path: 'checkout', component: CheckoutComponent,
-  },
+  // {
+  //   path: 'cart', component: CartComponent,
+  // },
+  // {
+  //   path: 'checkout', component: CheckoutComponent,
+  // },
 
 ]
 
 @NgModule({
-  declarations: [CartComponent,CheckoutComponent],
+  declarations: [],
   imports: [
     CommonModule,NgModule,
     RouterModule,

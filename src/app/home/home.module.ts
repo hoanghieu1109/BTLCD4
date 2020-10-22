@@ -33,7 +33,7 @@ const routes: Routes = [
 ]
 
 @NgModule({
-  declarations: [HomeComponent,ListchudeComponent,DetailproductComponent,CartComponent,CheckoutComponent],
+  declarations: [HomeComponent,ListchudeComponent,DetailproductComponent],
   imports: [
     CommonModule,NgbModule,
     RouterModule,

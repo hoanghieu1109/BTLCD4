@@ -23,20 +23,19 @@ const routes: Routes = [
   // {
   //   path: 'login',
   //   component: LoginComponent,
-  // },
+  // }, 
   
   
 ]; 
 
 @NgModule({
-  declarations: [CartComponent, CheckoutComponent,HeaderComponent,HomeComponent, LoginComponent],
+  declarations: [CartComponent, CheckoutComponent, LoginComponent],
   imports: [
     CommonModule,
     FormsModule,
     ReactiveFormsModule,
     RouterModule.forChild(routes),
-    HeaderComponent,
-    HomeComponent
+    
   ]
 })
 export class CustomerModule { }

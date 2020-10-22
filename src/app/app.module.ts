@@ -1,3 +1,7 @@
+import { CheckoutComponent } from './customer/checkout/checkout.component';
+import { CartComponent } from './customer/cart/cart.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { HomeComponent } from './home/home.component';
 import { HomeModule } from './home/home.module';
 
 import { BrowserModule } from '@angular/platform-browser';
@@ -22,7 +26,7 @@ import { HttpClientModule, HttpClient } from '@angular/common/http';
     AppComponent,
     HeaderComponent,
     FooterComponent,
-    
+
     
   
   ],
@@ -30,6 +34,8 @@ import { HttpClientModule, HttpClient } from '@angular/common/http';
     HttpClientModule,
     //HttpClient,
     BrowserModule,
+    FormsModule,
+    ReactiveFormsModule,
     AppRoutingModule,
     HomeModule,
     

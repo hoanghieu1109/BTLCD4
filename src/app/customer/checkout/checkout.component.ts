@@ -11,17 +11,17 @@ export class CheckoutComponent extends BaseComponent implements OnInit {
 
   items:any;
   total:any;
-  public donhangForm: FormGroup;
+  public hoadonForm: FormGroup;
 
   constructor(injector: Injector) {
     super(injector);
    }
 
    ngOnInit(): void {
-    this.donhangForm = new FormGroup({
+    this.hoadonForm = new FormGroup({
       ho_ten: new FormControl('', Validators.required),
-      dia_chi: new FormControl(''),
-      so_dien_thoai : new FormControl(''),      
+      dia_chi: new FormControl(''), 
+      sdt : new FormControl(''),      
     });
 
     this._cart.items.subscribe((res) => {
@@ -36,13 +36,14 @@ export class CheckoutComponent extends BaseComponent implements OnInit {
   }
 
   onSubmit(value: any) {
-    let donhang = {
+    let hoadon = {
       ho_ten: value.ho_ten,
        dia_chi: value.dia_chi,
-       so_dien_thoai: +value.so_dien_thoai,
+       sdt: value.sdt,
+       total: this.total,
        listjson_chitiet:this.items
       };
-    this._api.post('/api/donhang/themDH', donhang).takeUntil(this.unsubscribe).subscribe(res => {
+    this._api.post('/api/hoadon/create-hoa-don', hoadon).takeUntil(this.unsubscribe).subscribe(res => {
       alert('Tạo thành công');
        }, err => { });      
  
