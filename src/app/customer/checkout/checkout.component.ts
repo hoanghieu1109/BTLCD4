@@ -21,7 +21,7 @@ export class CheckoutComponent extends BaseComponent implements OnInit {
     this.hoadonForm = new FormGroup({
       ho_ten: new FormControl('', Validators.required),
       dia_chi: new FormControl(''), 
-      sdt : new FormControl(''),      
+      sdt : new FormControl(''),
     });
 
     this._cart.items.subscribe((res) => {
