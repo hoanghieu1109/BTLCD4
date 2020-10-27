@@ -11,7 +11,7 @@
                                 <ng-container *ngFor="let getchude of chude">
                                   <div class="panel panel-default">
                                     <div class="panel-heading">
-                                      <h4 class="panel-title"><a [routerLink] = "['/listchude',getchude.maChuDe]" >{{getchude.tenChuDe}}</a></h4>
+                                      <h4 class="panel-title"><a [routerLink] = "['/listchude',getchude.machude]" >{{getchude.tenchude}}</a></h4>
                                     </div>
                                   </div>
                                 </ng-container>
@@ -24,7 +24,7 @@
                         <div class="brands-name">
                             <ng-container *ngFor="let getnhaxuatban of nhaxuatban">
                             <ul class="nav nav-pills nav-stacked">
-                                <li><a href="">{{getnhaxuatban.tenNXB}}</a></li>
+                                <li><a href="">{{getnhaxuatban.tennxb}}</a></li>
                             </ul>
                             </ng-container>
                         </div>
@@ -49,17 +49,17 @@
                 <div class="product-details"><!--product-details-->
                     <div class="col-sm-4">
                         <div class="view-product">
-                            <img src="assets/images/{{sach.anhBia}}" alt="" />
+                            <img src="assets/images/{{sach.anhbia}}" alt="" />
                         </div>
                     </div>
                     <div class="col-sm-7">
                         <div class="product-information"><!--/product-information-->
                             <img src="" class="newarrival" alt="" />
-                            <h2>{{sach.tenSach}}</h2>
-                            <p>Mã sản phẩm: {{sach.maSach}}</p>
+                            <h2>{{sach.tensach}}</h2>
+                            <p>Mã sản phẩm: {{sach.masach}}</p>
                             
                             <span>
-                                <span>Giá: {{sach.giaBan}} VNĐ</span>
+                                <span>Giá: {{sach.giaban}} VNĐ</span>
                                 <label>Quantity:</label>
                                 <input type="text" value="3" />
                                 <button type="button" class="btn btn-fefault cart">
@@ -67,9 +67,9 @@
                                     Add to cart
                                 </button>
                             </span>
-                            <p><b>Chủ đề: {{sach.cd.tenChuDe}}</b></p>
+                            <p><b>Chủ đề: {{sach.cd.tenchude}}</b></p>
                             
-                            <p><b>Nhà xuất bản: {{sach.nxb.tenNXB}}</b></p>
+                            <p><b>Nhà xuất bản: {{sach.nxb.tennxb}}</b></p>
                             
                             
                         </div><!--/product-information-->

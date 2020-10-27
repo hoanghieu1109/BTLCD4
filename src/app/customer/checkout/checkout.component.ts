@@ -29,8 +29,8 @@ export class CheckoutComponent extends BaseComponent implements OnInit {
       this.total = 0;
       for(let x of this.items){ 
         x.so_luong = +x.quantity;
-        x.money = x.quantity * x.giaBan;
-        this.total += x.quantity * x.giaBan;
+        x.money = x.quantity * x.giaban;
+        this.total += x.quantity * x.giaban;
       } 
     });
   }
