@@ -16,15 +16,12 @@ export class LoginComponent extends BaseComponent implements OnInit {
    }
    ngOnInit(): void {
     this.registerForm = new FormGroup({
-      email: new FormControl('', [Validators.required,Validators.email]),
-      password: new FormControl('', [
-        Validators.required,
-        Validators.minLength(6),
-      ])
+      customer_email: new FormControl('', [Validators.required,Validators.email]),
+      customer_password: new FormControl('', [Validators.required,Validators.minLength(6),]),
     });
     this.loginForm = new FormGroup({
-      username: new FormControl('', Validators.required),
-      password: new FormControl('', [
+      customer_email: new FormControl('', Validators.required),
+      customer_password: new FormControl('', [
         Validators.required,
         Validators.minLength(6),
       ]),
@@ -32,12 +29,13 @@ export class LoginComponent extends BaseComponent implements OnInit {
     });
   }
   onSubmitLogin(value: any) { 
+    alert('Đăng nhập thành công');
 
   }
   onSubmitRegister(value: any) { 
 
-    this._api.post('/api/khachhang/create-item', {Email:value.email, MatKhau:value.password} ).takeUntil(this.unsubscribe).subscribe(res => {
-     alert('Tạo thành công');
+    this._api.post('/api/khachhang/create-item', {customer_email:value.customer_email, customer_password:value.customer_password} ).takeUntil(this.unsubscribe).subscribe(res => {
+     alert('Đăng ký thành công');
       }, err => { });      
 
   }
