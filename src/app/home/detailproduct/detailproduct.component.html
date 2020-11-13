@@ -24,19 +24,20 @@
                         <div class="brands-name">
                             <ng-container *ngFor="let getnhaxuatban of nhaxuatban">
                             <ul class="nav nav-pills nav-stacked">
-                                <li><a href="">{{getnhaxuatban.tennxb}}</a></li>
+                                <li><a  [routerLink] = "['/listnxb',getnhaxuatban.manxb]">{{getnhaxuatban.tennxb}}</a></li>
                             </ul>
                             </ng-container>
                         </div>
                     </div><!--/brands_products-->
-                    
-                    <div class="price-range"><!--price-range-->
+                    <!--price-range-->
+                    <!-- <div class="price-range">
                         <h2>Price Range</h2>
                         <div class="well">
                              <input type="text" class="span2" value="" data-slider-min="0" data-slider-max="600" data-slider-step="5" data-slider-value="[250,450]" id="sl2" ><br />
                              <b>$ 0</b> <b class="pull-right">$ 600</b>
                         </div>
-                    </div><!--/price-range-->
+                    </div> -->
+                    <!--/price-range-->
                     
                     <div class="shipping text-center"><!--shipping-->
                         <img src="images/home/shipping.jpg" alt="" />
@@ -60,11 +61,11 @@
                             
                             <span>
                                 <span>Giá: {{sach.giaban}} VNĐ</span>
-                                <label>Quantity:</label>
-                                <input type="text" value="3" />
+                                <!-- <label>Quantity:</label>
+                                <input type="text" value="1" /> -->
                                 <button type="button" class="btn btn-fefault cart">
-                                    <i class="fa fa-shopping-cart"></i>
-                                    Add to cart
+                                    <a (click)="addToCart(sach)"><i class="fa fa-shopping-cart"></i>
+                                    Add to cart</a>
                                 </button>
                             </span>
                             <p><b>Chủ đề: {{sach.cd.tenchude}}</b></p>

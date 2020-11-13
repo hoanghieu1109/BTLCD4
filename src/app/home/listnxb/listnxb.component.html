@@ -8,7 +8,7 @@
                     <div class="panel-group category-products" id="accordian"><!--category-productsr-->
                         <ng-container *ngFor="let getchude of chude">
                         <div class="panel panel-default">
-                            <div class="panel-heading"> 
+                            <div class="panel-heading">
                                 <h4 class="panel-title"><a [routerLink] = "['/listchude',getchude.machude]" >{{getchude.tenchude}}</a></h4>
                             </div>
                         </div>
@@ -47,7 +47,7 @@
                 <div class="features_items"><!--features_items-->
                     <h2 class="title text-center">Features Items</h2>
                    
-                    <ng-container *ngFor="let item of listpage">
+                    <ng-container *ngFor="let item of spnxb">
                     <div class="col-sm-3">
                         <div class="product-image-wrapper">
                             <div class="single-products">
@@ -64,6 +64,7 @@
                                         <i class="fa fa-shopping-cart"></i>Add to cart</a>
                                     </div>
                             </div>
+                            
                         </div>
                     </div>
                 </ng-container>

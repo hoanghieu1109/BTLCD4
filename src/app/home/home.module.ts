@@ -9,6 +9,7 @@ import { CommonModule } from '@angular/common';
 import { Routes, RouterModule } from '@angular/router';
 import { from } from 'rxjs';
 import { CartComponent } from '../customer/cart/cart.component';
+import { ListnxbComponent } from './listnxb/listnxb.component';
 
 const routes: Routes = [
   {
@@ -26,6 +27,9 @@ const routes: Routes = [
   {  
     path:'listchude/:id',component: ListchudeComponent,
   },
+  {  
+    path:'listnxb/:id',component: ListnxbComponent,
+  },
   {
     path: 'login', component: LoginComponent,
   },
@@ -33,7 +37,7 @@ const routes: Routes = [
 ]
 
 @NgModule({
-  declarations: [HomeComponent,ListchudeComponent,DetailproductComponent],
+  declarations: [HomeComponent,ListchudeComponent,DetailproductComponent, ListnxbComponent],
   imports: [
     CommonModule,NgbModule,
     RouterModule,

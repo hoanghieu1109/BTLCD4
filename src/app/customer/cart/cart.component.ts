@@ -24,7 +24,7 @@ export class CartComponent extends BaseComponent implements OnInit {
   } 
   clearCart() { 
     this._cart.clearCart();
-    alert('Xóa thành công');
+    alert('Xóa thành công'); 
   }
   addQty(item, quantity){ 
     item.quantity =  quantity;
