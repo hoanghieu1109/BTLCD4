@@ -13,6 +13,7 @@ export class DetailproductComponent extends BaseComponent implements OnInit {
   sach:any;
   chude:any;
   nhaxuatban:any;
+  tuongtu:any;
   constructor(injector: Injector) { 
     super(injector);
   }
@@ -27,6 +28,13 @@ export class DetailproductComponent extends BaseComponent implements OnInit {
         });
       }); 
       
+      this.tuongtu = {};
+      this._route.params.subscribe(params => {
+        let id = params['id'];
+        this._api.get('/api/sach/get-tuongtu/'+id).takeUntil(this.unsubscribe).subscribe(res => {
+          this.tuongtu = res;});
+        });
+
     });err => {};
     this.chude = {};
     this._api.get('/api/chude/get-all')

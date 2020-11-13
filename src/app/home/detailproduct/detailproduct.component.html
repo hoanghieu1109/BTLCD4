@@ -89,7 +89,7 @@
                             <div class="col-sm-12">
                                 
                                 <p>{{sach.mota}}</p>
-                                <p><b>Write Your Review</b></p>
+                                <!-- <p><b>Write Your Review</b></p>
                                 
                                 <form action="#">
                                     <span>
@@ -101,7 +101,7 @@
                                     <button type="button" class="btn btn-default pull-right">
                                         Submit
                                     </button>
-                                </form>
+                                </form> -->
                             </div>
                         </div>
                         
@@ -109,28 +109,30 @@
                 </div><!--/category-tab-->
                 
                 <div class="recommended_items"><!--recommended_items-->
-                    <h2 class="title text-center">recommended items</h2>
+                    <h2 class="title text-center">Sản phẩm tương tự</h2>
                     
                     <div id="recommended-item-carousel" class="carousel slide" data-ride="carousel">
                         <div class="carousel-inner">
-                            <div class="item active">	
+                            <div class="item active">
+                                <ng-container *ngFor="let item of tuongtu ">
                                 <div class="col-sm-4">
                                     <div class="product-image-wrapper">
                                         <div class="single-products">
                                             <div class="productinfo text-center">
-                                                <img src="images/home/recommend1.jpg" alt="" />
-                                                <h2>$56</h2>
-                                                <p>Easy Polo Black Edition</p>
+                                                <a [routerLink]="['/detailproduct',item.masach]"><img src="assets/images/{{item.anhbia}}" alt="" /></a>
+                                                <h2>{{item.giaban | currency:"VND"}}</h2>
+                                                <a [routerLink]="['/detailproduct',item.masach]"><p>{{item.tensach}}dsdsd</p></a> 
                                                 <button type="button" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</button>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
+                            </ng-container>	
                                 <div class="col-sm-4">
                                     <div class="product-image-wrapper">
                                         <div class="single-products">
                                             <div class="productinfo text-center">
-                                                <img src="images/home/recommend2.jpg" alt="" />
+                                                <img src="images/images/recommend2.jpg" alt="" />
                                                 <h2>$56</h2>
                                                 <p>Easy Polo Black Edition</p>
                                                 <button type="button" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</button>

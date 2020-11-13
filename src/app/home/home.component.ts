@@ -12,6 +12,7 @@ import 'rxjs/add/operator/takeUntil';
 })
 export class HomeComponent extends BaseComponent implements OnInit {
   list_item:any;
+  list_item_new:any;
   chude:any;
   nhaxuatban:any;
   listpage: any;
@@ -32,6 +33,11 @@ export class HomeComponent extends BaseComponent implements OnInit {
       console.log(this.list_item);
       setTimeout(() => {
         this.loadScripts();
+        Observable.combineLatest(
+          this._api.get('/api/sach/get-new'),
+        ).takeUntil(this.unsubscribe).subscribe(res => {
+          this.list_item_new = res[0];
+        }, err => {});
       });
     }, err => {});
     this._api.get('/api/chude/get-all')
