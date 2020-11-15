@@ -1,23 +1,23 @@
-import { CheckoutComponent } from './../customer/checkout/checkout.component';
 
-import { CartComponent } from './../customer/cart/cart.component';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Routes, RouterModule } from '@angular/router';
+import { TintucComponent } from './tintuc/tintuc.component';
+import { GioithieuComponent } from './gioithieu/gioithieu.component';
 
 
 const routers: Routes = [
   // {
-  //   path: 'cart', component: CartComponent,
+  //   path: 'tintuc', component: TintucComponent,
   // },
   // {
-  //   path: 'checkout', component: CheckoutComponent,
+  //   path: 'gioithieu', component: GioithieuComponent,
   // },
 
 ]
 
 @NgModule({
-  declarations: [],
+  declarations: [TintucComponent, GioithieuComponent],
   imports: [
     CommonModule,NgModule,
     RouterModule,

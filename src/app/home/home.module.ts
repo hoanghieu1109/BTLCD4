@@ -1,3 +1,5 @@
+import { GioithieuComponent } from './../header/gioithieu/gioithieu.component';
+import { TintucComponent } from './../header/tintuc/tintuc.component';
 import { LoginComponent } from './../customer/login/login.component';
 import { CheckoutComponent } from './../customer/checkout/checkout.component';
 import { ListchudeComponent } from './../home/listchude/listchude.component';
@@ -10,6 +12,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { from } from 'rxjs';
 import { CartComponent } from '../customer/cart/cart.component';
 import { ListnxbComponent } from './listnxb/listnxb.component';
+
 
 const routes: Routes = [
   {
@@ -32,6 +35,12 @@ const routes: Routes = [
   },
   {
     path: 'login', component: LoginComponent,
+  },
+  {
+    path: 'tintuc', component: TintucComponent,
+  },
+  {
+    path: 'gioithieu', component: GioithieuComponent,
   },
   
 ]

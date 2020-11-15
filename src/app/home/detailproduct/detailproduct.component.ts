@@ -27,15 +27,15 @@ export class DetailproductComponent extends BaseComponent implements OnInit {
           this.loadScripts();
         });
       }); 
-      
-      this.tuongtu = {};
-      this._route.params.subscribe(params => {
-        let id = params['id'];
-        this._api.get('/api/sach/get-tuongtu/'+id).takeUntil(this.unsubscribe).subscribe(res => {
-          this.tuongtu = res;});
-        });
-
     });err => {};
+
+    this._route.params.subscribe(params => {
+      let id = params['id'];
+      this._api.get('/api/sach/get-tuongtu/'+id).takeUntil(this.unsubscribe).subscribe(res => {
+        this.tuongtu = res;
+      });
+      });
+
     this.chude = {};
     this._api.get('/api/chude/get-all')
     .takeUntil(this.unsubscribe).subscribe(res2 => {

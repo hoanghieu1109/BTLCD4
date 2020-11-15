@@ -64,17 +64,13 @@
                     <div class="mainmenu pull-left">
                         <ul class="nav navbar-nav collapse navbar-collapse">
                             <li><a routerLink="/home" class="active">Trang chủ</a></li>
-                            
                             <li class="dropdown"><a href="#">Chủ đề<i class="fa fa-angle-down"></i></a>
-                               
                                 <ul role="menu" class="sub-menu">
                                     <ng-container *ngFor="let item of chude">
                                     <li><a [routerLink] = "['/listchude',item.machude]" >{{item.tenchude}}</a></li>
                                     </ng-container>
                                 </ul>
-
                             </li> 
-                            
                             <li class="dropdown"><a href="#">Nhà xuất bản<i class="fa fa-angle-down"></i></a>
                                 
                                 <ul role="menu" class="sub-menu">
@@ -84,8 +80,8 @@
                                 </ul>
                                 
                             </li> 
-                            <li><a href="404.html">Tin tức</a></li>
-                            <li><a href="contact-us.html">Giới thiệu</a></li>
+                            <li><a [routerLink] = "['/tintuc']">Tin tức</a></li>
+                            <li><a [routerLink]= "['/gioithieu']">Giới thiệu</a></li>
                         </ul>
                     </div>
                 </div>
